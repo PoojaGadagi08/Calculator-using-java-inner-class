@@ -1,0 +1,87 @@
+
+class Calculator{
+    float n1;
+    float n2;
+    float result;
+
+    private class ArithmaticOperation{
+        public void addition(){
+            result=n1+n2;
+            d.display();
+        }
+        public void subraction(){
+            result=n1-n2;
+            d.display();
+        }
+        public void multiplication(){
+            result=n1*n2;
+            d.display();
+        }
+        public void division(){
+            result=n1/n2;
+            d.display();
+        }
+        public void modulo(){
+            result=n1%n2;
+            d.display();
+        }
+        class Display{
+            public void display(){
+                System.out.println("Result is= "+result);
+            }
+        }
+        Display d =new Display();
+
+    }
+    ArithmaticOperation A=new ArithmaticOperation();
+    public void addition(int a,int b){
+        n1=a;
+        n2=b;
+        A.addition();
+    }
+    public void subraction(int a,int b){
+        n1=a;
+        n2=b;
+        A.subraction();
+    }
+    public void multiplication(int a,int b){
+        n1=a;
+        n2=b;
+        A.multiplication();
+    }
+    public void division(int a,int b){
+        n1=a;
+        n2=b;
+        A.division();
+    }
+    public void modulo(int a,int b){
+        n1=a;
+        n2=b;
+        A.modulo();
+    }
+
+}
+
+public class AccessCalculator{
+
+    public static void main(String[] args) {
+
+        Calculator C=new Calculator();
+
+        System.out.println("**Addition**");
+        C.addition(4,8);
+
+        System.out.println("**Subraction**");
+        C.subraction(4,8);
+
+        System.out.println("**Multiplication**");
+        C.multiplication(4,8);
+
+        System.out.println("**Division**");
+        C.division(4,8);
+
+        System.out.println("**Modulo**");
+        C.modulo(4,8);
+
+    }
+}
